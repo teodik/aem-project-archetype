@@ -15,7 +15,7 @@ pipeline{
         }
         stage('build'){
             steps{
-                sh "mvn -PautoInstallPackage clean install"
+                sh "mvn -PautoInstallPackage clean install -Dcrx.host=10.0.2.15 -Dcrx.username=admin -Dcrx.password=admin"
             }
         }
     }
