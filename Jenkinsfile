@@ -15,8 +15,7 @@ pipeline{
         }
         stage('build'){
             steps{
-                sh "cd src/main/archetype"
-                sh "mvn autoInstallPackage clean install"
+                sh "mvn clean install autoInstallPackage"
             }
         }
     }
