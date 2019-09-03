@@ -15,7 +15,7 @@ pipeline{
         }
         stage('build'){
             steps{
-                sh "mvn -autoInstallPackage clean install"
+                sh "mvn autoInstallPackage clean install"
             }
         }
     }
