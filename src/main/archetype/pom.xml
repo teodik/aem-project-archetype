@@ -335,7 +335,7 @@
             <id>adobe-public</id>
 
             <activation>
-                <activeByDefault>false</activeByDefault>
+                <activeByDefault>true</activeByDefault>
             </activation>
 
             <properties>
@@ -413,7 +413,7 @@
         <profile>
             <id>autoInstallPackage</id>
             <activation>
-                <activeByDefault>true</activeByDefault>
+                <activeByDefault>false</activeByDefault>
             </activation>
             <build>
                 <pluginManagement>
