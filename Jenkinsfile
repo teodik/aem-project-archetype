@@ -15,7 +15,17 @@ pipeline{
         }
         stage('build'){
             steps{
-                sh "mvn clean install autoInstallPackage"
+                sh "mvn clean install"
+            }
+        }
+        stage('run'){
+            steps{
+                sh '''
+                    mvn archetype:generate 
+                    -DarchetypeGroupId=com.adobe.granite.archetypes 
+                    -DarchetypeArtifactId=aem-project-archetype 
+                    -DarchetypeVersion=21-SNAPSHOT
+                    '''
             }
         }
     }
