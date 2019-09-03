@@ -13,5 +13,10 @@ pipeline{
                 sh "echo 'GIT_BRANCH_NAME = ${GIT_BRANCH_NAME}'"
             }
         }
+        stage('build'){
+            steps{
+                sh "mvn clean install "
+            }
+        }
     }
 }
