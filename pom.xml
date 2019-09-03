@@ -282,7 +282,7 @@
     </profiles>
 
 
-  <distributionManagement>
+  <!--<distributionManagement>
     <repository>
       <id>${releaseRepository-Id}</id>
       <name>${releaseRepository-Name}</name>
@@ -294,7 +294,24 @@
       <url>${snapshotRepository-URL}</url>
       <uniqueVersion>false</uniqueVersion>
     </snapshotRepository>
-  </distributionManagement>
+  </distributionManagement>--->
+
+<repositories>
+    <repository>
+        <id>adobe-public-releases</id>
+        <name>Adobe Public Repository</name>
+        <url>https://repo.adobe.com/nexus/content/groups/public/</url>
+        <layout>default</layout>
+    </repository>
+</repositories>
+<pluginRepositories>
+    <pluginRepository>
+        <id>adobe-public-releases</id>
+        <name>Adobe Public Repository</name>
+        <url>https://repo.adobe.com/nexus/content/groups/public/</url>
+        <layout>default</layout>
+    </pluginRepository>
+</pluginRepositories>
 
   <properties>
       <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
